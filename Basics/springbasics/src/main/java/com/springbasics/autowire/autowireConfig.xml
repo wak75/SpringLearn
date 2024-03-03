@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+
+
+    <!-- <bean class="com.springbasics.autowire.Address" name="address0">
+        <property name="City" value="New York" />
+        <property name="Street" value="1234 Main Street" />
+        <property name="Pincode" value="12345" />
+    </bean> -->
+
+    <bean class="com.springbasics.autowire.Address" name="address1">
+        <property name="City" value="Bathinda" />
+        <property name="Street" value="Dhobiwala bazaar" />
+        <property name="Pincode" value="110010" />
+    </bean>
+
+
+
+    <bean class="com.springbasics.autowire.Employee" name="employee1" autowire="constructor"/>
+
+</beans>

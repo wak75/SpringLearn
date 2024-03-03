@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">   
+
+
+    <bean class="com.springbasics.collection.Employee" name="empDetail1">
+        <property name="name" value="Washim"/>
+        
+        <property name="phones">
+            <list>
+                <value>444555666</value>
+                <value>777888999</value>
+                <value>111222333</value>    
+            </list>
+        </property>
+
+
+        <property name="addresses">
+            <list>
+                <value>Pune</value>
+                <value>Mumbai</value>
+                <value>Delhi</value>
+            </list>
+        </property>
+
+        <property name="courses">
+            <map>
+                <entry key="java" value="77%"/>
+                <entry key="c++" value="88%"/>
+                <entry key="python" value="99%"/>
+            </map>
+        </property>
+
+        <property name="skills">
+            <set>
+                <value>Speaking</value>
+                <value>Writing</value>
+            </set>
+        </property>
+
+        <property name="props">
+            <props>
+                <prop key="username">Washim</prop>
+                <prop key="password">Hehe</prop>
+            </props>
+        </property>
+    </bean>
+
+
+
+
+
+    <bean class="com.springbasics.collection.Employee" name="empDetail2">
+        <property name="name" value="King"/>
+        <property name="phones">
+            <list>
+                <value>11111</value>
+                <value>22222</value>
+                <value>33333</value>
+            </list>
+        </property>
+        
+        <property name="addresses">
+            <list>
+                <value>USA</value>
+                <value>UK</value>
+                <value>India</value>
+            </list>
+        </property>
+
+
+        <property name="courses">
+            <map>
+                <entry key="java" value="100%"/>
+                <entry key="c++" value="100%"/>
+                <entry key="python" value="100%"/>
+            </map>
+        </property>
+
+        <property name="skills">
+            <set>
+                <value>Driving</value>
+                <value>Singing</value>
+            </set>
+        </property>
+
+        <property name="props">
+            <props>
+                <prop key="username">King</prop>
+                <prop key="password">hehe2</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>

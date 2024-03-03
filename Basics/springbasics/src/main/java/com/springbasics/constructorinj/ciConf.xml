@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+
+    <bean class="com.springbasics.constructorinj.Cars" name="carsAll">
+        <constructor-arg type="List">
+            <list>
+                <value>BMW M3</value>
+                <value>Mercedes CLK500</value>
+                <value>Toyota Supra</value>
+                <value>Audi R8</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.springbasics.constructorinj.Person" name="Person1">
+        <constructor-arg value="Washim" type="String"/>
+        <constructor-arg value="Male" type="String"/>
+        <constructor-arg value="24" type="int"/>
+        <constructor-arg type="List">
+            <list>
+                <value>1111</value>
+                <value>2222</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg ref="carsAll" type="Cars"/>
+    </bean>
+
+    <bean class="com.springbasics.constructorinj.Person" name="Person2">
+        <constructor-arg value="King" type="String"/>
+        <constructor-arg value="Male" type="String"/>   
+        <constructor-arg value="26" type="int"/>
+        <constructor-arg type="List">
+            <list>
+                <value>7777</value>
+                <value>9999</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg ref="carsAll" type="Cars"/>
+    </bean>
+
+</beans>

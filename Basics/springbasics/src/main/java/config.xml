@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+
+    <bean class="com.springbasics.Student" name="student1">
+        <property name="studentID">
+            <value>1</value>
+        </property>
+
+        <property name="studentName">
+            <value>Washim</value>
+        </property>
+
+         <property name="studentAddress">
+            <value>India</value>
+        </property>
+    </bean>
+
+    <!--Beans can be defined in different ways this is the second way-->
+    <bean class="com.springbasics.Student" name="student2">
+        <property name="studentID" value="2"/>
+        <property name="studentName" value="King"/>
+        <property name="studentAddress" value="USA"/>
+    </bean>
+
+    <!--this is the third way to declear a bean using the PSchema, the namespace should be imported for using the Pschema-->
+    <bean class="com.springbasics.Student" name="student3" p:studentID="3" p:studentName="Raj" p:studentAddress="Canada"/>
+</beans>
